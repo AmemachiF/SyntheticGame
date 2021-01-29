@@ -7,10 +7,9 @@ const {ccclass, property} = cc._decorator;
 export default class Main extends cc.Component {
 
     @property({
-        default: null,
         type: Balls
     })
-    balls: Balls
+    balls: Balls = null
 
     ballArr: cc.Prefab[]
 
@@ -85,7 +84,7 @@ export default class Main extends cc.Component {
                 } else if (lx > this.node.width - this.currentNode.width / 2 * this.currentNode.scaleX) {
                     lx = this.node.width - this.currentNode.width / 2 * this.currentNode.scaleX
                 }
-                this.currentNode.setPositionX(lx - this.node.width / 2)
+                this.currentNode.setPosition(cc.v2(lx - this.node.width / 2, this.currentNode.position.y))
             }
         }
     }
@@ -99,7 +98,7 @@ export default class Main extends cc.Component {
                 } else if (lx > this.node.width - this.currentNode.width / 2 * this.currentNode.scaleX) {
                     lx = this.node.width - this.currentNode.width / 2 * this.currentNode.scaleX
                 }
-                this.currentNode.setPositionX(lx - this.node.width / 2)
+                this.currentNode.setPosition(cc.v2(lx - this.node.width / 2, this.currentNode.position.y))
             }
         }
     }
@@ -113,7 +112,7 @@ export default class Main extends cc.Component {
                 } else if (lx > this.node.width - this.currentNode.width / 2 * this.currentNode.scaleX) {
                     lx = this.node.width - this.currentNode.width / 2 * this.currentNode.scaleX
                 }
-                this.currentNode.setPositionX(lx - this.node.width / 2)
+                this.currentNode.setPosition(cc.v2(lx - this.node.width / 2, this.currentNode.position.y))
                 this.setPhysics(this.currentNode)
                 this.currentNode = null
                 this.spawnNewBall(Math.round(Math.random() * 4))

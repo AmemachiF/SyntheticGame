@@ -30,16 +30,14 @@ export default class Ball extends cc.Component {
                 const y = otherCollider.node.position.y
                 sn.removeComponent(cc.Collider)
                 sn.removeComponent(cc.RigidBody)
-                sn.runAction(
-                    cc.sequence(
-                        cc.moveTo(0.05, x, y),
-                        cc.callFunc(() => {
-                            sn.destroy()
-                            on.destroy()
-                            this.main.setPhysics(this.main.reSpawnBall(++this.level, x, y))
-                        })
-                    )
-                )
+                cc.tween(sn)
+                    .to(0.05, { position: cc.v3(x, y) })
+                    .call(() => {
+                        sn.destroy()
+                        on.destroy()
+                        this.main.setPhysics(this.main.reSpawnBall(++this.level, x, y))
+                    })
+                    .start()
             }
         }
     }

@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "lib": [ "dom", "es5", "es2015.promise" ],
+    "lib": [ "es2015", "es2017", "dom" ],
     "target": "es5",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "outDir": "temp/vscode-dist",
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "library",
+    "local",
+    "temp",
+    "build",
+    "settings"
   ]
 }

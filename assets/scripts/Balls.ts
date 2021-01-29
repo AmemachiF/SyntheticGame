@@ -3,70 +3,59 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Balls extends cc.Component {
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball1: cc.Prefab
+    ball1: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball2: cc.Prefab
+    ball2: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball3: cc.Prefab
+    ball3: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball4: cc.Prefab
+    ball4: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball5: cc.Prefab
+    ball5: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball6: cc.Prefab
+    ball6: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball7: cc.Prefab
+    ball7: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball8: cc.Prefab
+    ball8: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball9: cc.Prefab
+    ball9: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball10: cc.Prefab
+    ball10: cc.Prefab = null
 
     @property({
-        default: null,
         type: cc.Prefab
     })
-    ball11: cc.Prefab
+    ball11: cc.Prefab = null
 
     getBalls () {
         return [
