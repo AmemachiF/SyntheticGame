@@ -1,0 +1,27 @@
+{
+  "appKey": "",
+  "appSecret": "",
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.SyntheticGame",
+  "privateKey": "",
+  "renderMode": "0",
+  "startScene": "d9e1ebe9-d354-4d11-9761-4087813ecee2",
+  "title": "SyntheticGame",
+  "webOrientation": "auto"
+}
