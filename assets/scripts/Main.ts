@@ -40,6 +40,10 @@ export default class Main extends cc.Component {
         this.node.on(cc.Node.EventType.MOUSE_MOVE, this.onMousemove())
         this.node.on(cc.Node.EventType.MOUSE_UP, this.onMouseup())
         this.node.on(cc.Node.EventType.MOUSE_LEAVE, this.onMouseup())
+        this.node.on(cc.Node.EventType.TOUCH_START, this.onMousedown())
+        this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onMousemove())
+        this.node.on(cc.Node.EventType.TOUCH_END, this.onMouseup())
+        this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onMouseup())
         let manager = cc.director.getPhysicsManager();
         manager.enabled = true;
         manager.gravity = cc.v2(0, -960);
